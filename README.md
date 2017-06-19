@@ -18,6 +18,8 @@
 
 EFFC框架下的访问都是rest的访问方式，不同的是采用L.A请求（Logic.action）来访问不同的资源与后台接口，L.A请求是忽略路径的，/sample.razor.go与/xxxx/sample.razor.go是相同的，另外本版本中有提供类似路由的请求方式，如/sample/razor就是/sample.razor.go
 
+referencedll中是框架引用的包集合，框架是基于EFFC3.0构建的，可以下载EFFC3.0的源码自行编译，将release出来的dll全部copy到referencedll目录下即可完成更新，也可以通过这种方式来解决debug过程中无法访问到底层代码的情况
+
 # 目录结构
 分为4个部分
 * Builder.Web:应用的建构层，基于EFFC底层框架，构建符合系统业务标准的框架，该层定义了go和hgo请求，并对Logic层做了扩展，如果有自己的业务要求或对外接口定义可以在本结构中定义
