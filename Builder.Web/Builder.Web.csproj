@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{498261E1-4BB3-43DC-BC70-D7C90993388F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Builder.Web</RootNamespace>
+    <AssemblyName>Builder.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EFFC.Frame.Net.Base">
+      <HintPath>..\referencedll\EFFC.Frame.Net.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EFFC.Frame.Net.Business">
+      <HintPath>..\referencedll\EFFC.Frame.Net.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="EFFC.Frame.Net.Data">
+      <HintPath>..\referencedll\EFFC.Frame.Net.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EFFC.Frame.Net.Global">
+      <HintPath>..\referencedll\EFFC.Frame.Net.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="EFFC.Frame.Net.Web">
+      <HintPath>..\referencedll\EFFC.Frame.Net.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Noesis.Javascript, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ae36d046c7f89f85, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\referencedll\Noesis.Javascript.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\referencedll\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\referencedll\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\referencedll\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\GoBusinessModule.cs" />
+    <Compile Include="Business\HostBusinessModule.cs" />
+    <Compile Include="Business\PreProcessGoModule.cs" />
+    <Compile Include="Business\PreProcessModule.cs" />
+    <Compile Include="Business\PreWeixinProcessModule.cs" />
+    <Compile Include="Business\ViewAfterProcessModule.cs" />
+    <Compile Include="Business\ViewBusinessModule.cs" />
+    <Compile Include="Contant\KeyDics.cs" />
+    <Compile Include="Global\GlobalPrepare.cs" />
+    <Compile Include="Handler\FrameHandlerFactory.cs" />
+    <Compile Include="Handler\GoHandler.cs" />
+    <Compile Include="Handler\HostHandler.cs" />
+    <Compile Include="Handler\ViewHandler.cs" />
+    <Compile Include="Handler\WeixinHandler.cs" />
+    <Compile Include="Handler\WeixinHostHandler.cs" />
+    <Compile Include="Helper\Cryptography.cs" />
+    <Compile Include="Helper\FrameJson.cs" />
+    <Compile Include="Helper\HostJsServer.cs" />
+    <Compile Include="Helper\HtmlParseHelper.cs" />
+    <Compile Include="Helper\L2Cache.cs" />
+    <Compile Include="Helper\MongoCache.cs" />
+    <Compile Include="Helper\WebPartHelper.cs" />
+    <Compile Include="Attributes\BindDBAttribute.cs" />
+    <Compile Include="Attributes\LoginAttribute.cs" />
+    <Compile Include="Helper\WXBizMsgCrypt.cs" />
+    <Compile Include="Logic\DevLogic.cs" />
+    <Compile Include="Logic\FrameHostJsLogic.HostJsObject.cs" />
+    <Compile Include="Logic\FrameHostJsLogic.cs" />
+    <Compile Include="Logic\GoLogic.AlyOpenIM.cs" />
+    <Compile Include="Logic\GoLogic.AlyOss.cs" />
+    <Compile Include="Logic\GoLogic.AlyPay.cs" />
+    <Compile Include="Logic\GoLogic.cs" />
+    <Compile Include="Logic\GoLogic.Extention.cs" />
+    <Compile Include="Logic\GoLogic.FileServer.cs" />
+    <Compile Include="Logic\GoLogic.HostJs.cs" />
+    <Compile Include="Logic\GoLogic.Mongodb.cs" />
+    <Compile Include="Logic\GoLogic.OuterInterface.cs" />
+    <Compile Include="Logic\GoLogic.PageValidate.cs" />
+    <Compile Include="Logic\GoLogic.QueryByPage.cs" />
+    <Compile Include="Logic\GoLogic.Razor.cs" />
+    <Compile Include="Logic\GoLogic.WebIM.cs" />
+    <Compile Include="Logic\GoLogic.Weixin.cs" />
+    <Compile Include="Logic\HostDebugBaseLogic.cs" />
+    <Compile Include="Logic\ViewLogic.cs" />
+    <Compile Include="Logic\ViewLogic.HostJs.cs" />
+    <Compile Include="Logic\ViewLogic.Mongodb.cs" />
+    <Compile Include="Logic\ViewLogic.OuterInterface.cs" />
+    <Compile Include="Logic\ViewLogic.QueryByPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\AliHttpProxy.cs" />
+    <Compile Include="Proxy\AliOpenIMHttpProxy.cs" />
+    <Compile Include="Proxy\BusinessProxy.cs" />
+    <Compile Include="Proxy\GoBusinessProxy.cs" />
+    <Compile Include="Proxy\HostBusinessProxy.cs" />
+    <Compile Include="Proxy\HTMLHttpProxy.cs" />
+    <Compile Include="Proxy\PreProcessGoProxy.cs" />
+    <Compile Include="Proxy\PreProcessProxy.cs" />
+    <Compile Include="Proxy\PreWeixinProcessProxy.cs" />
+    <Compile Include="Proxy\SMSProxy.cs" />
+    <Compile Include="Proxy\TradeProxy.cs" />
+    <Compile Include="Proxy\ViewAfterProcessProxy.cs" />
+    <Compile Include="Proxy\WebIMHttpProxy.cs" />
+    <Compile Include="Proxy\WeixinHttpProxy.cs" />
+    <Compile Include="Proxy\WeixinPlatformProxy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

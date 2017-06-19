@@ -1,0 +1,1518 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.WebControlLib</name>
+    </assembly>
+    <members>
+        <member name="T:EFFC.Frame.Net.WebControlLib.OnAjaxValidatorDelegate">
+            <summary>
+            Validator Delegate On Ajax
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.AjaxValidator">
+            <summary>
+            AJAX CustomValidator
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.AjaxValidator.#ctor">
+            <summary>
+            method
+            </summary>
+        </member>
+        <member name="E:EFFC.Frame.Net.WebControlLib.AjaxValidator.OnAjaxValidatorQuest">
+            <summary>
+            event
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.AjaxValidator.OnInit(System.EventArgs)">
+            <summary>
+            On Init
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.AjaxValidator.OnLoad(System.EventArgs)">
+            <summary>
+            On Load
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.AjaxValidator.QueryInfo">
+            <summary>
+            Query Info Attribute
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.AjaxValidator.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs">
+            <summary>
+            AJAX Validator Eventargs
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs.#ctor(System.String)">
+            <summary>
+            AJAX Validator Eventargs
+            </summary>
+            <param name="_queryData"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs.IsAllowSubmit">
+            <summary>
+            Is or isn't Allow Submit Attribute
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs.Info">
+            <summary>
+            Info Attribute
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs.QueryData">
+            <summary>
+            Query Data Attribute
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.AjaxValidatorEventArgs.QueryInfo">
+            <summary>
+            QueryInfo Attribute
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustAdRotator">
+            <summary>
+            Custom AdRotator
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustCalendar">
+            <summary>
+            Custom Calendar
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustCheckBox">
+            <summary>
+            Custom CheckBox
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustFileUpload">
+            <summary>
+            Expand WebControls control;
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustGridView">
+            <summary>
+            Expand Gridview control
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.ShowHeaderAllways">
+            <summary>
+            is or isn't show header all way
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.CssClass">
+            <summary>
+            Name of CssClass
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.AllowPaging">
+            <summary>
+            Does paging function open
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.AutoGenerateColumns">
+            <summary>
+            Auto Generation Columns
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.SNWidth">
+            <summary>
+            Width of SeqNo column
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.PagerVisible">
+            <summary>
+            is or isn't visible pager
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.SortAscImageUrl">
+            <summary>
+            asc image URL
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.SortDescImageUrl">
+            <summary>
+            Desc 
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.PageIndex">
+            <summary>
+            翻頁控件當前頁碼
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.PageZize">
+            <summary>
+            翻頁控件每頁顯示筆數
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.HasUpdatePanel">
+            <summary>
+            Does paging has UpdatePanel
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.OnInit(System.EventArgs)">
+            <summary>
+            Override OnInit method
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.OnPreRender(System.EventArgs)">
+            <summary>
+            Override Render
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.OnRowCreated(System.Web.UI.WebControls.GridViewRowEventArgs)">
+            <summary>
+            Override When Row create ,if select colume is ordered,then then show image of order on colume's header   
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.BindSort(System.Web.UI.WebControls.GridViewSortEventArgs)">
+            <summary>
+            bind sort
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.SortExpression">
+            <summary>
+            Sort Expression
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.SortDirection">
+            <summary>
+            Sort Direction
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustGridView.strSortDirection">
+            <summary>
+            String of sort direction
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.DisplaySortOrderImages(System.String,System.Web.UI.WebControls.GridViewRow)">
+            <summary>
+             Display sort order images
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.SearchSortExpression(System.String[],System.String,System.String@,System.Int32@)">
+            <summary>
+             Search sort expression
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.CreateHeaderRow">
+            <summary>
+            Create header row
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.OnRowDataBound(System.Web.UI.WebControls.GridViewRowEventArgs)">
+            <summary>
+            Override OnRowDataBound   
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustGridView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Override RenderContents   
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustHyperLink">
+            <summary>
+            Expand HyperLink
+            <see cref="T:System.Web.UI.WebControls.HyperLink"/>
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustImage">
+            <summary>
+            Expand Image control
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustImage.IsSetSize">
+            <summary>
+            is or isn't set image's size(set max height and max width)
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustImage.BlankImageUrl">
+            <summary>
+            when image is disable then show this image
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustImage.IsShowEffect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustImage.Href">
+            <summary>
+            Image link url
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustImage.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Override Render method.set image style by custom attribute
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustImageButton">
+            <summary>
+            Expand ImageButton control
+            Create ConfirmMsg attribute,Show the confirmMsg when the button onclick;
+            Create CheckSaved attribute,check current page is or isn't saved when the button onclick
+            <see cref="T:System.Web.UI.WebControls.ImageButton"/>
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustImageButton.EImageButtonType">
+            <summary>
+            UserType
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.CustImageButton.EImageButtonType.View">
+            <summary>
+            View
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.CustImageButton.EImageButtonType.Edit">
+            <summary>
+            Edit
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.CustImageButton.EImageButtonType.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.CustImageButton.ButtonType">
+            <summary>
+            imagebutton type:view,edit,delete
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.CustImageButton.SetButton(EFFC.Frame.Net.WebControlLib.CustImageButton.EImageButtonType)">
+            <summary>
+            Show different images when the type is different
+            </summary>
+            <param name="ButtonType"></param>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustImageMap">
+            <summary>
+            Expand ImageMap
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustLinkButton">
+            <summary>
+            Expand LinkButton
+            <see cref="T:System.Web.UI.WebControls.LinkButton"/>
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustListBox">
+            <summary>
+            Expand ListBox
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustListView">
+            <summary>
+            Expand ListView
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustLiteral">
+            <summary>
+            Expand Literal
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustMenu">
+            <summary>
+            Expand menu    /// </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustMultiView">
+            <summary>
+            Expand MultiView
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustPanel">
+            <summary>
+            Expand Panel
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustPlaceHolder">
+            <summary>
+            Expand PlaceHolder
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustRepeater">
+            <summary>
+            Expand Repeater
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustSubstitution">
+            <summary>
+            Expand Substitution
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustTreeview">
+            <summary>
+            Expand TreeView
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustUpdatePanel">
+            <summary>
+            Expand UpdatePanel
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustView">
+            <summary>
+            Expand View
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.CustWizard">
+            <summary>
+            Expand Wizard
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.DatePicker">
+            <summary>
+            Summary description for DatePicker.
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.Enable">
+            <summary>
+            Set or get enable of control
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.DatePicker.Focus">
+            <summary>
+            Set focus of control's textbox
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.Width">
+            <summary>
+            Set or get width of control's textbox
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.MaxLength">
+            <summary>
+            Set or get length of textbox's max 
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.CssClass">
+            <summary>
+            CSS Class
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgClose">
+            <summary>
+            imgClose
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgDivider">
+            <summary>
+            imgDivider
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgDrop1">
+            <summary>
+            imgDrop1
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgDrop2">
+            <summary>
+            imgDrop2
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgLeft1">
+            <summary>
+            imgLeft1
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgLeft2">
+            <summary>
+            imgLeft2
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgRight1">
+            <summary>
+            imgRight1
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.imgDirectory">
+            <summary>
+            imgDirectory
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.ControlCssClass">
+            <summary>
+            ControlCssClass
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.DateType">
+            <summary>
+            DateType
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.IsRequired">
+            <summary>
+            Is required
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.DatePicker.ValidateName">
+            <summary>
+            Validate Name
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.DatePicker.#ctor">
+            <summary>
+            Date picker
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.DatePicker.placeJavascript">
+            <summary>
+            javascript
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.DatePicker.CreateChildControls">
+            <summary>
+            Override create childe controls
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.GridPager">
+            <summary>
+            Expend Pager
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowNavigationToolTip">
+            <summary>
+            ShowNavigationToolTip
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NavigationToolTipTextFormatString">
+            <summary>
+            NavigationToolTipTextFormatString
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ChinesePageIndex">
+            <summary>
+            Chinese index
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NumericButtonTextFormatString">
+            <summary>
+            Format of Index
+            </summary>
+            <remarks>
+            if you set this to [{0}],the index would show like this [1] [2] [3] ... if set to -{0}- it may show -1- -2- -3- ...
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PagingButtonType">
+            <summary>
+            Paging button type
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NumericButtonType">
+            <summary>
+            It will only be valid when PagingButtonType is set to Image
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NavigationButtonType">
+            <summary>
+            It will only be valid when PagingButtonType is set to Image
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.MoreButtonType">
+            <summary>
+            more(...)
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PagingButtonSpacing">
+            <summary>
+            Get or set gap among paging buttons
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowFirstLast">
+            <summary>
+            Show First and Last
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowPrevNext">
+            <summary>
+            Show previous and next
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowPageIndex">
+            <summary>
+            Show page index
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.FirstPageText">
+            <summary>
+            The text of first button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PrevPageText">
+            <summary>
+            The text of previous button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NextPageText">
+            <summary>
+            The text of next button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.LastPageText">
+            <summary>
+            The text of last button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.NumericButtonCount">
+            <summary>
+            Navigation button counts
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowDisabledButtons">
+            <summary>
+            Show disabled buttons
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ImagePath">
+            <summary>
+            the Image's URL of Image button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ButtonImageExtension">
+            <summary>
+            Image button's filename extension 
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ButtonImageNameExtension">
+            <summary>
+            Get or set type of Image button's filename extension  
+            </summary>
+            <remarks><note>note:</note>this isn't filename extensio,is type of filename extension,example:1f.gif,1n.gif,f and n is type of filename extension</remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CpiButtonImageNameExtension">
+            <summary>
+            Get or set index of current page can be used image button
+            </summary>
+            <remarks>
+            When<see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.PagingButtonType"/>is images index of current page or index of other page can be used image button else<see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.ButtonImageNameExtension"/>used same image button
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.DisabledButtonImageNameExtension">
+            <summary>
+            Get or set disabled NavigationTool can be used image's extensio
+            </summary>
+            <remarks>
+            When<see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.PagingButtonType"/>Set Image can be allow set disable <see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.ButtonImageNameExtension"/>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.UrlPaging">
+             <summary>
+             Start using url to pass paging info
+             </summary>
+             <remarks>
+             </remarks>
+             <example>
+             <code><![CDATA[
+            <%@Register TagPrefix="Webdiyer" Namespace="Wuqi.Webdiyer" Assembly="aspnetpager"%>
+            <%@Import Namespace="System.Data.OleDb"%>
+            <%@ Import Namespace="System.Data"%>
+            <%@ Page Language="C#" debug=true%>
+            <HTML>
+            	<HEAD>
+            		<TITLE>Welcome to Webdiyer.com </TITLE>
+            		<script runat="server">
+            		OleDbConnection conn;
+            		OleDbCommand cmd;
+            		void Page_Load(object src,EventArgs e){
+            		conn=new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+Server.MapPath("access/aspnetpager.mdb"));
+            		if(!Page.IsPostBack){
+            		cmd=new OleDbCommand("select count(newsid) from wqnews",conn);
+            		conn.Open();
+            		pager.RecordCount=(int)cmd.ExecuteScalar();
+            		conn.Close();
+            		BindData();
+            		}
+            		}
+            
+            		void BindData(){
+            		cmd=new OleDbCommand("select newsid,heading,source,addtime from wqnews order by addtime desc",conn);
+            		OleDbDataAdapter adapter=new OleDbDataAdapter(cmd);
+            		DataSet ds=new DataSet();
+            		adapter.Fill(ds,pager.PageSize*(pager.CurrentPageIndex-1),pager.PageSize,"news");
+            		dg.DataSource=ds.Tables["news"];
+            		dg.DataBind();
+            		}
+            
+            		void ChangePage(object src,PageChangedEventArgs e){
+            		pager.CurrentPageIndex=e.NewPageIndex;
+            		BindData();
+            		}
+            
+            		</script>
+            		<meta http-equiv="Content-Language" content="zh-cn">
+            		<meta http-equiv="content-type" content="text/html;charset=gb2312">
+            		<META NAME="Generator" CONTENT="EditPlus">
+            		<META NAME="Author" CONTENT="Webdiyer(yhaili@21cn.com)">
+            	</HEAD>
+            	<body>
+            		<form runat="server" ID="Form1">
+            			<h2 align="center">AspNetPagerだボㄒ</h2>
+            			<asp:DataGrid id="dg" runat="server" 
+            			Width="760" CellPadding="4" Align="center" />
+            			
+            			<Webdiyer:AspNetPager runat="server" id="pager" 
+            			OnPageChanged="ChangePage" 
+            			HorizontalAlign="center" 
+            			style="MARGIN-TOP:10px;FONT-SIZE:16px" 
+            			PageSize="8" 
+            			ShowInputBox="always" 
+            			SubmitButtonStyle="border:1px solid #000066;height:20px;width:30px" 
+            			InputBoxStyle="border:1px #0000FF solid;text-align:center" 
+            			SubmitButtonText="锣" 
+            			UrlPaging="true" 
+            			UrlPageIndexName="pageindex" />
+            		</form>
+            	</body>
+            </HTML>
+             ]]></code>
+             </example>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.UrlPageIndexName">
+            <summary>
+            The parameter name for URL
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CurrentPageIndex">
+            <summary>
+            Current page index
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.RecordCount">
+             <summary>
+             Record count
+             </summary>
+             <example>
+             ボㄒ陪ボ絪祘よΑ盢眖Sql粂癘魁羆计结倒赣妮┦
+             <p>
+             <code><![CDATA[
+             <HTML>
+             <HEAD>
+             <TITLE>Welcome to Webdiyer.com </TITLE>
+             <script runat="server">
+            		SqlConnection conn;
+            		SqlCommand cmd;
+            		void Page_Load(object src,EventArgs e)
+            		{
+            			conn=new SqlConnection(ConfigurationSettings.AppSettings["ConnStr"]);
+            			if(!Page.IsPostBack)
+            			{
+            				cmd=new SqlCommand("select count(id) from news",conn);
+            				conn.Open();
+            				pager.RecordCount=(int)cmd.ExecuteScalar();
+            				conn.Close();
+            				BindData();
+            			}
+            		}
+            
+            		void BindData()
+            		{
+            			cmd=new SqlCommand("GetPagedNews",conn);
+            			cmd.CommandType=CommandType.StoredProcedure;
+            			cmd.Parameters.Add("@pageindex",pager.CurrentPageIndex);
+            			cmd.Parameters.Add("@pagesize",pager.PageSize);
+            			conn.Open();
+            			dataGrid1.DataSource=cmd.ExecuteReader();
+            			dataGrid1.DataBind();
+            			conn.Close();
+            		}
+            		void ChangePage(object src,PageChangedEventArgs e)
+            		{
+            			pager.CurrentPageIndex=e.NewPageIndex;
+            			BindData();
+            		}
+            		</script>
+            		<meta http-equiv="Content-Language" content="zh-cn">
+            		<meta http-equiv="content-type" content="text/html;charset=gb2312">
+            		<META NAME="Generator" CONTENT="EditPlus">
+            		<META NAME="Author" CONTENT="Webdiyer(yhaili@21cn.com)">
+            	</HEAD>
+            	<body>
+            		<form runat="server" ID="Form1">
+            			<asp:DataGrid id="dataGrid1" runat="server" />
+            
+            			<Webdiyer:AspNetPager id="pager" runat="server" 
+            			PageSize="8" 
+            			NumericButtonCount="8" 
+            			ShowCustomInfoSection="before" 
+            			ShowInputBox="always" 
+            			CssClass="mypager" 
+            			HorizontalAlign="center" 
+            			OnPageChanged="ChangePage" />
+            
+            		</form>
+            	</body>
+            </HTML>
+             ]]>
+             </code></p>
+             <code><![CDATA[
+            CREATE procedure GetPagedNews
+            		(@pagesize int,
+            		@pageindex int)
+            		as
+            		set nocount on
+            		declare @indextable table(id int identity(1,1),nid int)
+            		declare @PageLowerBound int
+            		declare @PageUpperBound int
+            		set @PageLowerBound=(@pageindex-1)*@pagesize
+            		set @PageUpperBound=@PageLowerBound+@pagesize
+            		set rowcount @PageUpperBound
+            		insert into @indextable(nid) select id from news order by addtime desc
+            		select O.id,O.title,O.source,O.addtime from news O,@indextable t where O.id=t.nid
+            		and t.id>@PageLowerBound and t.id<=@PageUpperBound order by t.id
+            		set nocount off
+            GO
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PagesRemain">
+            <summary>
+            Pages count haven't shown behind current page
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PageSize">
+            <summary>
+            Page size
+            </summary>
+            <remarks>
+            Set page size <see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.RecordCount"/> <see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.PageCount"/></remarks>
+            <example>see sample <see cref="!:AspNetPager"/> 8 records are shown below,
+            <code>
+            <![CDATA[
+             ...
+             <Webdiyer:AspNetPager id="pager" runat="server" PageSize=8 OnPageChanged="ChangePage"/>
+             ...
+            ]]></code></example>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.RecordsRemain">
+            <summary>
+            Records count haven't shown behind current page
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PageCount">
+            <summary>
+            Page count
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowPageSize">
+             <summary>
+             Show PageSize input box
+             </summary>
+             <remarks>
+             set input box to be shown
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowInputBox">
+             <summary>
+             Show input box
+             </summary>
+             <remarks>
+             set input box to be shown
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.InputBoxClass">
+            <summary>
+            Css class of input box
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.InputBoxStyle">
+            <summary>
+            Style text of input box
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.TextBeforeInputBox">
+            <summary>
+            Text before input box
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.TextAfterInputBox">
+            <summary>
+            Text after input box
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.SubmitButtonText">
+            <summary>
+            Text of submit button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.SubmitButtonClass">
+            <summary>
+            Css class of submit button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.SubmitButtonStyle">
+            <summary>
+            Style text of submit button
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowBoxThreshold">
+            <summary>
+            Auto show input box when page count touch its setting value and <see cref="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowInputBox"/> is set to Auto but not Never or Always
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.ShowCustomInfoSection">
+            <summary>
+            The shown way of customize area
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CustomInfoTextAlign">
+            <summary>
+            CustomInfoTextAlign
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CustomInfoSectionWidth">
+            <summary>
+            CustomInfoSectionWidth
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CustomInfoClass">
+            <summary>
+            CustomInfoClass
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CustomInfoStyle">
+            <summary>
+            CustomInfoStyle
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CustomInfoText">
+            <summary>
+            Get custominfo
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.AlwaysShow">
+            <summary>
+            Is pager always shown
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.CssClass">
+            <summary>
+            Css class of pager 
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.EnableViewState">
+            <summary>
+            Enable viewstate
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.PageIndexOutOfRangeErrorString">
+            <summary>
+            Error message will be shown to user when page index is out of range
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.InvalidPageIndexErrorString">
+            <summary>
+            Error message will be shown to user when page index format which is entered by user is invalid
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.AppendMessage">
+            <summary>
+            Append to no results message
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridPager.AppendName">
+            <summary>
+            AppendName
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.OnLoad(System.EventArgs)">
+            <summary>
+            override<see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)"/>method
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.OnPreRender(System.EventArgs)">
+            <summary>
+            override<see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)"/>method
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            override<see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)"/> 
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            override<see cref="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)"/> <see cref="!:AspNetPager"/>  <see cref="T:System.Web.UI.HtmlTextWriter"/> 
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            override<see cref="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)"/>  <see cref="!:AspNetPager"/>   <see cref="T:System.Web.UI.HtmlTextWriter"/>  
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/> </param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            override<see cref="M:System.Web.UI.WebControls.WebControl.RenderContents(System.Web.UI.HtmlTextWriter)"/>  <see cref="T:System.Web.UI.HtmlTextWriter"/> 
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.GetStyleString">
+            <summary>
+            Change style text to string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.WriteCellAttributes(System.Web.UI.HtmlTextWriter,System.Boolean)">
+            <summary>
+            Set attribute to td for navigation and customer area
+            </summary>
+            <param name="writer"></param>
+            <param name="leftCell">is it the first td</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.GetHrefString(System.Int32)">
+            <summary>
+            Get string of hyperlink with navigation button
+            </summary>
+            <param name="pageIndex">the index of navigation button corresponded to page index</param>
+            <returns>link string</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.BuildUrlString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            URL paging method, add paging parameter to url
+            </summary>
+            <param name="col">paging parameter of key\value pair</param>
+            <returns>the url string</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.CreateNavigationButton(System.Web.UI.HtmlTextWriter,System.String)">
+            <summary>
+            Create navigation button
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+            <param name="btnname">button name</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.WriteCssClass(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Write the css class
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.AddToolTip(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Add tool tip to navigation buttons
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+            <param name="pageIndex">the index of navigation button corresponded to page index</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.CreateNumericButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Create number index of navigation button
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+            <param name="index">index of button for page index</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.WriteButtonSpace(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Add space to button
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.GetChinesePageIndex(System.Int32)">
+            <summary>
+            Get Chinese page index
+            </summary>
+            <param name="index">page index</param>
+            <returns>chinese page</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.CreateNumericImages(System.Web.UI.HtmlTextWriter,System.Int32,System.Boolean)">
+            <summary>
+            Create image button
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+            <param name="index">page index</param>
+            <param name="isCurrent">Is it current page</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.CreateMoreButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Create more(...) button
+            </summary>
+            <param name="writer"><see cref="T:System.Web.UI.HtmlTextWriter"/></param>
+            <param name="pageIndex">page index</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.RaisePostBackEvent(System.String)">
+            <summary>
+            emplement<see cref="T:System.Web.UI.IPostBackEventHandler"/> interface <see cref="!:AspNetPager"/> 
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            emplement<see cref="T:System.Web.UI.IPostBackDataHandler"/> interface <see cref="!:AspNetPager"/> 
+            </summary>
+            <param name="pkey">controls' identify</param>
+            <param name="pcol">name\value collection</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.RaisePostDataChangedEvent">
+            <summary>
+            emplement <see cref="T:System.Web.UI.IPostBackDataHandler"/> interface
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "E:EFFC.Frame.Net.WebControlLib.GridPager.PageChanged" -->
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridPager.OnPageChanged(EFFC.Frame.Net.WebControlLib.PageChangedEventArgs)">
+            <summary>
+            emplement<see cref="E:EFFC.Frame.Net.WebControlLib.GridPager.PageChanged"/> 
+            </summary>
+            <param name="e"> <see cref="T:EFFC.Frame.Net.WebControlLib.PageChangedEventArgs"/> </param>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.PageChangedEventHandler">
+            <summary>
+            define <see cref="!:AspNetPager.PageChanged"/> delegate
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.PageChangedEventArgs">
+            <summary>
+             <see cref="!:AspNetPager"/> event args<see cref="!:AspNetPager.PageChanged"/> 
+            </summary>
+            <remarks>
+            <see cref="!:AspNetPager"/>page index changed<see cref="!:AspNetPager.PageChanged"/> 
+            </remarks>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.PageChangedEventArgs.#ctor(System.Int32)">
+            <summary>
+            initial
+            </summary>
+            <param name="newPageIndex">new page index <see cref="!:AspNetPager"/> </param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EFFC.Frame.Net.WebControlLib.PageChangedEventArgs.NewPageIndex" -->
+        <member name="T:EFFC.Frame.Net.WebControlLib.ShowInputBox">
+            <summary>
+            way for Input box shown
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowInputBox.Never">
+            <summary>
+            never show input box
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowInputBox.Auto">
+            <summary>
+            auto show input box by <see cref="!:AspNetPager.ShowBoxThreshold"/> 
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowInputBox.Always">
+            <summary>
+            always show input box
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.ShowCustomInfoSection">
+            <summary>
+            Where is the customer info shown
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowCustomInfoSection.Never">
+            <summary>
+            never shown
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowCustomInfoSection.Left">
+            <summary>
+            shown before navigation
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.ShowCustomInfoSection.Right">
+            <summary>
+            shown after navigation
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.PagingButtonType">
+            <summary>
+            specify page button type
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.PagingButtonType.Text">
+            <summary>
+            text
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.PagingButtonType.Image">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.PagerDesigner">
+            <summary>
+            <see cref="!:AspNetPager"/> designer
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.PagerDesigner.GetDesignTimeHtml">
+            <summary>
+            override GetDesignTimeHtml
+            display designer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.PagerDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
+            <summary>
+            Region can't select
+            </summary>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.PagerDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <summary>
+            override GetErrorDesignTimeHtml
+            display errors while creating control
+            </summary>
+            <param name="e">exception</param>
+            <returns>html error</returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB">
+            <summary>
+            Pager by Database
+            </summary>
+        </member>
+        <member name="E:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.OnSetDataSource">
+            <summary>
+            Delegate on set data source
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.checkBoxes">
+            <summary>
+            List of checkboxs on the page
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.#ctor">
+            <summary>
+            Build
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.GridViewPageingByDB_Sorting(System.Object,System.Web.UI.WebControls.GridViewSortEventArgs)">
+            <summary>
+            Sorting method
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.GridViewPageingByDB_RowDataBound(System.Object,System.Web.UI.WebControls.GridViewRowEventArgs)">
+            <summary>
+            RowDataBound
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridViewPageingByDB.ShowHeaderAllways">
+            <summary>
+            ShowHeaderAllways
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.MoveListBoxValidatior">
+            <summary>
+            MoveListBox
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.FileUploadManager">
+            <summary>
+            ゅン肚北摸
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.#cctor">
+            <summary>
+            篶祘Α.﹍て
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.GetCurrent(System.Web.UI.Page)">
+            <summary>
+            眔讽玡いFileUploadManager
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.FileUploadManager.isInAjaxUploading">
+            <summary>
+            琌FileUploadManager
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.FileUploadManager.SupportAjaxUpload">
+            <summary>
+            琌やAjaxUpload
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.OnInit(System.EventArgs)">
+            <summary>
+            糶﹍て
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.OnPreRender(System.EventArgs)">
+            <summary>
+            糶北ン酶礶玡ㄆン
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.RenderPageCallback(System.Web.UI.HtmlTextWriter,System.Web.UI.Control)">
+            <summary>
+            ネΘCallBack
+            </summary>
+            <param name="writer"></param>
+            <param name="pageControl"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.EnsureIsInAjaxFileUploading">
+            <summary>
+            絋玂琌AjaxFileUploadじン肚
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadManager.Page_Error(System.Object,System.EventArgs)">
+            <summary>
+            矪瞶岿Hander
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EFFC.Frame.Net.WebControlLib.FileUploadManager._PageRequestManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.FileUploadManager.PageRequestManager">
+            <summary>
+            弄㎝糶PageRequestManager妮┦
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.FileUploadModule">
+            <summary>
+            FileUploadModule
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadModule.Init(System.Web.HttpApplication)">
+            <summary>
+            ﹍て
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadModule.PreSendRequestHeadersHandler(System.Object,System.EventArgs)">
+            <summary>
+            эResponseHeader磞瓃?
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadModule.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.FileUploadUtility">
+            <summary>
+            FileUpload公共方法類
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadUtility.#cctor">
+            <summary>
+            建構程式
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadUtility.WriteScriptBlock(System.Web.HttpResponse,System.Boolean)">
+            <summary>
+            JavaScript的開始或結束語句
+            </summary>
+            <param name="response">HttpResponse二進制流</param>
+            <param name="begin">是否爲開始</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadUtility.EncodeString(System.IO.TextWriter,System.String,System.String,System.String)">
+            <summary>
+            以指定Encode
+            </summary>
+            <param name="writer"></param>
+            <param name="type"></param>
+            <param name="id"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.FileUploadUtility.IsInIFrameAsyncPostBack(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            判斷請求是否爲__IsInAjaxFileUploading__回傳的請求
+            </summary>
+            <param name="requestBody"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageChangedEvent">
+            <summary>
+            PageNavigation控件翻頁時間執行處理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.TotalPage">
+            <summary>
+            總頁數
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.SetTotalPage(System.Int32)">
+            <summary>
+            寫入總頁數
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.CurrentPage">
+            <summary>
+            當前頁
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.SetCurrentPage(System.Int32)">
+            <summary>
+            寫入當前頁
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.SetTotalSize(System.Int32)">
+            <summary>
+            写入總資料筆數
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.GridViewCustom.PageNavigation.GetPNByID(System.String)">
+            <summary>
+            根據ID查找控件
+            只從本控件往上找，一直到Page層，如果還沒找到就返回空
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.Input.CalendarInput.PreDateTime">
+            <summary>
+            前次设定的值
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.Interfaces.ActionSettingEvent">
+            <summary>
+            權限控件需要根據授權的ActionID進行權限設定
+            </summary>
+            <param name="sender"></param>
+            <param name="authorizedActionIDs">被授權的ActionID，可以為多個，麼個之間用口號分割</param>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.Interfaces.IActionPermission.ActionID">
+            <summary>
+            權限設定的ActionID，允許多個ActionID，每個之間口號分割
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.WebControlLib.Interfaces.IActionPermission.ControlByPermission(System.String)">
+            <summary>
+            功過ActionID進行本控件的權限控制
+            </summary>
+            <param name="authorizedActionid">被授權的ActionID</param>
+        </member>
+        <member name="P:EFFC.Frame.Net.WebControlLib.Navigation.FrameworkMenu.DataSource">
+            <summary>
+            需要绑定的DataSource
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.WebControlLib.TypeConvert.PageNavigationControlConverter">
+            <summary>
+            翻页器的控件类型转换器
+            列出所有的PageNavigation
+            </summary>
+        </member>
+        <member name="T:Framework.WebControls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Framework.WebControls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Framework.WebControls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Framework.WebControls.Properties.Resources.AjaxValidatorScript">
+             <summary>
+               Looks up a localized string similar to function AjaxValidatorFunction(source, arguments)
+            {
+            	var webRequest = false;
+            	if(window.XMLHttpRequest)
+            	{ 
+            		webRequest = new XMLHttpRequest();
+            	} 
+            	else if(window.ActiveXObject)
+            	{
+            		try 
+            		{ 
+            			webRequest = new ActiveXObject(&apos;Msxml2.XMLHTTP&apos;);
+            		} 
+            		catch (e1)
+            		{ 
+            			try 
+            			{ 
+            				webRequest = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);
+            			} 
+            			catch (e2)  
+            			{}
+            		}
+            	}
+            	if(webRequest)
+            	{
+            		var Ctrl=document.getElementById(source.controltovalidate); 
+            		var formText=&apos;QueryCtrl=&apos; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Framework.WebControls.Properties.Resources.ReportViewLogScript">
+             <summary>
+               Looks up a localized string similar to function ReportViewSaveLog(id,actionType,url)
+            {
+            	var webRequest = false;
+            	if(window.XMLHttpRequest)
+            	{ 
+            		webRequest = new XMLHttpRequest();
+            	} 
+            	else if(window.ActiveXObject)
+            	{
+            		try 
+            		{ 
+            			webRequest = new ActiveXObject(&apos;Msxml2.XMLHTTP&apos;);
+            		} 
+            		catch (e1)
+            		{ 
+            			try 
+            			{ 
+            				webRequest = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);
+            			} 
+            			catch (e2)  
+            			{}
+            		}
+            	}
+            	if(webRequest)
+            	{
+            		var Ctrl=document.getElementById(id);
+            		var formText=&apos;QueryCtrl=&apos;+encodeURI(id)+&apos;&amp;QueryData= [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>

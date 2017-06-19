@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Global</name>
+    </assembly>
+    <members>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon">
+            <summary>
+            Frame全局环境参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.ExceptionProcessor">
+            <summary>
+            異常處理
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.ApplicationCache">
+            <summary>
+            框架cache
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.FlowCommon">
+            <summary>
+            流程公共相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.FlowCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.FlowCommon.FlowDefineAssemblyPath">
+            <summary>
+            flow control的assembly path
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.FlowCommon.StepAssemblyPath">
+            <summary>
+            FlowStep的assembly path
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.WMvcCommon">
+            <summary>
+            MVC View相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.WMvcCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.GoCommon">
+            <summary>
+            Go相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.GoCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.AspRCommon">
+            <summary>
+            ASPR相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.AspRCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.CssxCommon">
+            <summary>
+            Cssx相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.CssxCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.WebFormCommon">
+            <summary>
+            Web From相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.WebFormCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.TagCommon">
+            <summary>
+            Tag解析器相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.TagCommon.TagAssemblyPath">
+            <summary>
+            tag parse的assembly path
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.UnitCommon">
+            <summary>
+            Unit相关参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.UnitCommon.UnitAssemblyPath">
+            <summary>
+            Unit呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.WebSocketCommon.MaxConnectionMinutes">
+            <summary>
+            长时间无交互时，连接存活的最大时间(分钟),默认10分钟
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.HostCommon">
+            <summary>
+            Host View的公共参数设置
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.HostCommon.RootPath">
+            <summary>
+            Host Js文件的默认根路径(含公共、View、Logic、Compiled的根路径）
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.ConsoleCommon">
+            <summary>
+            console的公共参数设置
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.ConsoleCommon.LogicAssemblyPath">
+            <summary>
+            Business呼叫的Logic的AssemblyPath
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Global.GlobalCommon.WebCommon">
+            <summary>
+            web的公共参数设置
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Global.GlobalCommon.WebCommon.StartPage">
+            <summary>
+            web的默认起始页面
+            </summary>
+        </member>
+    </members>
+</doc>

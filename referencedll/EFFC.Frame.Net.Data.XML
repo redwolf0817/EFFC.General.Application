@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Data</name>
+    </assembly>
+    <members>
+        <member name="T:EFFC.Frame.Net.Data.DataConvert.QueryByPage2Json">
+            <summary>
+            将UnitDataCollection中的涉及到翻页的属性转化成Json
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowData.IsSuccess">
+            <summary>
+            流程处理的状态
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowData.Message">
+            <summary>
+            流程处理的结果信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowData.ResultContent">
+            <summary>
+            流程处理的结果内容
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowData.CurrentInfo">
+            <summary>
+            当前流程处理的数据结果信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.FlowName">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.InstanceID">
+            <summary>
+            实例名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.FlowVersion">
+            <summary>
+            流程版本号1
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.FlowState">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.StepID">
+            <summary>
+            流程step
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceInfo.ExtionObj">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceReport.ResultStep">
+            <summary>
+            执行完成之后的当前Step
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowInstanceReport.ResultState">
+            <summary>
+            执行后的状态
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Data.FlowData.FlowVersion">
+            <summary>
+            流程版本号模型
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowVersion.Main">
+            <summary>
+            主版本号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowVersion.Sub">
+            <summary>
+            子版本号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.FlowData.FlowVersion.Extention">
+            <summary>
+            扩展版本号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LogicData.LogicData.ToPage">
+            <summary>
+            转到页号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LogicData.LogicData.CurrentPage">
+            <summary>
+            当前页号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LogicData.LogicData.Count_Per_Page">
+            <summary>
+            每页笔数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LogicData.LogicData.WebSocketRecieveData">
+            <summary>
+            Websocket传送的文字数据
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.UserID">
+            <summary>
+            登录者的ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.AccountID">
+            <summary>
+            登陆账号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.SourceType">
+            <summary>
+            SourceType
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.UserName">
+            <summary>
+            登录者的名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.RoleName">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.GroupID">
+            <summary>
+            群组ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.GroupName">
+            <summary>
+            群组名稱
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.TeamID">
+            <summary>
+            組ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.TeamName">
+            <summary>
+            組Name
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.AgentID">
+            <summary>
+            被代理人的ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.AgentName">
+            <summary>
+            被代理人的名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.LastLoginDatetime">
+            <summary>
+            上次登陆时间
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.LoginTime">
+            <summary>
+            登陸時間
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.ForceLogoutTimeOut">
+            <summary>
+            強制登出超時設定
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.LoginIPAddress">
+            <summary>
+            登陸者的IP地址
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.LoginUserData.UserSex">
+            <summary>
+            登陆者的性别
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Data.ActionCollection">
+            <summary>
+            本权限模型基于FunctionID：页面=1：多。
+            每个FunctionID会针对权限进行ActionID的设定，FunctionID：ActionID=1：多
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.Data.ActionCollection._d">
+            <summary>
+            functionid-action映射表
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.Data.ActionCollection._dbyurl">
+            <summary>
+            url-action映射表
+            </summary>
+        </member>
+        <member name="F:EFFC.Frame.Net.Data.ActionCollection._wildcardsmap">
+            <summary>
+            通配符映射表
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetActionByPageUrlUsingWideCards(System.String)">
+            <summary>
+            采用通配符搜索action
+            </summary>
+            <param name="pageUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetFunctionIDByPageUrl(System.String)">
+            <summary>
+            通过PageUrl获取对应的FunctionID
+            </summary>
+            <param name="pageUrl">页面的URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetParentFunctionIDByPageUrl(System.String)">
+            <summary>
+            通过PageUrl获取对应的ParentFunctionID
+            </summary>
+            <param name="pageUrl">页面的URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetActionIDsByPageUrl(System.String)">
+            <summary>
+            通过PageUrl获取对应的被授权的ActionID
+            </summary>
+            <param name="pageUrl">页面的URL</param>
+            <returns>多个ActionID会以逗号连接</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetActionsByPageUrl(System.String)">
+            <summary>
+            获取Action
+            </summary>
+            <param name="pageUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetActionIDsByFunctionID(System.String)">
+            <summary>
+            根据FunctionID获取对应的ActionID
+            </summary>
+            <param name="functionID">功能编号</param>
+            <returns>多个ActionID会以逗号连接</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.GetActionsByFunctionID(System.String)">
+            <summary>
+            根据FunctionID获取对应的ActionID
+            </summary>
+            <param name="functionID">功能编号</param>
+            <returns>多个ActionID会以逗号连接</returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.AddAction(System.String,System.String,System.String,System.String)">
+            <summary>
+            新增一个Action设定
+            </summary>
+            <param name="functionID">FunctionID</param>
+            <param name="parentFunctionId">parentFunctionId</param>
+            <param name="pageurl">页面Url,如果对应多个url，则每个url以逗号分隔</param>
+            <param name="actionID">ActionID</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.AddAction(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            新增一个Action设定
+            </summary>
+            <param name="functionID">FunctionID</param>
+            <param name="parentFunctionId">parentFunctionId</param>
+            <param name="pageurl">页面Url,如果对应多个url，则每个url以逗号分隔</param>
+            <param name="actionID">ActionID</param>
+            <param name="Fileds"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.SetActionByFunctionID(System.String,System.String)">
+            <summary>
+            根据FunctionID写入新的actionID
+            </summary>
+            <param name="functionID">FunctionID</param>
+            <param name="actionID">待写入的actionID</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionCollection.SetActionByPageUrl(System.String,System.String)">
+            <summary>
+            根页面写入新的actionID
+            </summary>
+            <param name="pageUrl">页面Url</param>
+            <param name="actionID">待写入的ActionID</param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.ActionCollection.HasActions">
+            <summary>
+            判断是否含有权限设定
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionEntity.AddAction(System.String)">
+            <summary>
+            新增单个ActionID
+            </summary>
+            <param name="actionid"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.ActionEntity.AddActions(System.String)">
+            <summary>
+            新增多个ActionID
+            </summary>
+            <param name="actionids"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.ConsoleParameter.DBConnectionString">
+            <summary>
+            DBConnectionString
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.ConsoleParameter.Logic">
+            <summary>
+            请求的logic
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.ConsoleParameter.Action">
+            <summary>
+            请求的action
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter.FlowName">
+            <summary>
+            请求的流程名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter.FlowInstanceID">
+            <summary>
+            请求的流程实例
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter.JumpStep">
+            <summary>
+            指定跳到指定步骤
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter.CalledLogicName">
+            <summary>
+            当前被呼叫的logic名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter.IsContinue">
+            <summary>
+            决定后面流程是否继续执行
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.UnitParameter.SPParameter">
+            <summary>
+            存储过程的参数集
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.UnitParameter.Count_Of_OnePage">
+            <summary>
+            一页显示资料笔数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.UnitParameter.CurrentPage">
+            <summary>
+            当前页数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.UnitParameter.ToPage">
+            <summary>
+            转转页数
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.Parameters.UnitParameter.ClearParameters">
+            <summary>
+            清空参数，但保留dao和dbconnstring,resource manager和transtoken
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.UnitParameter.OperationType">
+            <summary>
+            Unit中的操作标记
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.Parameters.WebParameter.UploadFile(System.String)">
+            <summary>
+            获取上传的文件对象，如果没有则返回null
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.ForbiddenName">
+            <summary>
+            禁用的Key名
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.LoginInfo">
+            <summary>
+            登陆的信息数据
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.RequestResourcePath">
+            <summary>
+            client端请求的资源路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.DBConnectionString">
+            <summary>
+            DBConnectionString
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.RequestResourceName">
+            <summary>
+            client端请求的资源名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.RequestResources">
+            <summary>
+            资源请求数组
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.Action">
+            <summary>
+            页面请求动作
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.CanContinue">
+            <summary>
+            主流程是否可以继续往下走
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.IsNeedSessionAbandon">
+            <summary>
+            是否需要清理Session
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.LoginPath">
+            <summary>
+            登陆请求的路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.IndexPath">
+            <summary>
+            主页面请求的路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.ErrorPath">
+            <summary>
+            出错页面请求路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.ServerRootPath">
+            <summary>
+            Server的RootPath,物理路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.ServerRootPath_URL">
+            <summary>
+            Server的RootPath,站点路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.ServerPhysicPath">
+            <summary>
+            Server的RootPath
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.SiteUrl">
+            <summary>
+            站点的请求url
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.Domain">
+            <summary>
+            站点域名
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.IsWebSocket">
+            <summary>
+            是否为websocket调用
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.Parameters.WebParameter.RequestContent">
+            <summary>
+            请求的内容
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.Parameters.WebParameter.Clone">
+            <summary>
+            复制一个WebParameter对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Data.RuleData.PersistentResult">
+            <summary>
+            持久化的结果
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.RuleData.PersistentResult.StateFlag">
+            <summary>
+            状态标记
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.RuleData.PersistentResult.CurrentStepUID">
+            <summary>
+            当前Step的UID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.DOCollection.PropertyValue">
+            <summary>
+            获取的属性值
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.DOCollection.ListValue">
+            <summary>
+            获取的列表值
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryDatas">
+            <summary>
+            查询的数据集
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryTable">
+            <summary>
+            查询的数据集
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryData``1(System.Int32)">
+            <summary>
+            查询的数据集，将QueryDatas中指定的table转化成List
+            </summary>
+            <typeparam name="T">dto数据类型</typeparam>
+            <param name="tableindex">table index</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryData``1">
+            <summary>
+            查询的数据集，将QueryTable转化成List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryData2Json">
+            <summary>
+            查询的数据转化成json数据格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.MongoListData">
+            <summary>
+            mongo的数据结果集
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.QueryByPage2Json">
+            <summary>
+            查询的数据转化成json数据格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.TotalPage">
+            <summary>
+            總頁數
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.CurrentPage">
+            <summary>
+            當前頁數
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.Count_Of_OnePage">
+            <summary>
+            一頁顯示多少筆
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.UnitData.UnitDataCollection.TotalRow">
+            <summary>
+            總比數
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.ResponseData">
+            <summary>
+            待返回response的结果串
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.ContentType">
+            <summary>
+            返回数据的类型,默认为json数据
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.RedirectUri">
+            <summary>
+            Response跳转，此属性为高优先级
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.ViewPath">
+            <summary>
+            要显示的页面路径，格式:~/Views/xxx/xxx.cshtml
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.StartViewName">
+            <summary>
+            模板页面的名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.GoData.MvcModuleData">
+            <summary>
+            Mvc中的Module数据对象
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.WMvcData.ViewPath">
+            <summary>
+            要显示的页面路径，格式:~/Views/xxx/xxx.cshtml
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.WMvcData.StartViewName">
+            <summary>
+            模板页面的名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.WMvcData.MvcModuleData">
+            <summary>
+            Mvc中的Module数据对象
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.WMvcData.Scripts">
+            <summary>
+            返回的脚本，不需要添加<script></script>标签
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Data.WebData.WMvcData.RedirectUri">
+            <summary>
+            Response跳转，此属性为高优先级，该值不为空时，不会处理ViewPath
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Rule.Data.RuleData.EvaluateResult">
+            <summary>
+            计算出的结果值
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Rule.Data.RuleData.ErrorCode">
+            <summary>
+            出错时的错误编号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Rule.Data.RuleData.ErrorMsg">
+            <summary>
+            出错时的错误信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Rule.Data.RuleData.ErrorType">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+    </members>
+</doc>

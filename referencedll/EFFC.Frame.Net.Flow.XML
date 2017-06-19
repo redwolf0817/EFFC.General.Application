@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Flow</name>
+    </assembly>
+    <members>
+        <member name="P:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DOD">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.Mongo">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.Config">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DB">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.NewResourceEntity``1">
+            <summary>
+            創建一個普通的資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.NewTransResourceEntity``1">
+            <summary>
+            創建一個事務資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.NewUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.NewDBUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter，默认Dao为DB类型的DBAccess
+            </summary>
+            <typeparam name="DB"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.NewDBUnitParameter">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.SetUnitParameter(EFFC.Frame.Net.Data.LogicData.FlowLogicData,EFFC.Frame.Net.Data.Parameters.UnitParameter)">
+            <summary>
+            将Logic的数据写入到UnitParameter
+            </summary>
+            <param name="ld"></param>
+            <param name="up"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.SetUnitParameter(EFFC.Frame.Net.Data.LogicData.FlowLogicData,EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            将Logic的数据写入到UnitParameter
+            </summary>
+            <param name="ld"></param>
+            <param name="up"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.DBHelper.Query``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            查询操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.ConditionBaseDriver.CurrentInstance">
+            <summary>
+            当前实例信息
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Flow.Core.FlowBaseControl">
+            <summary>
+            流程控制器
+            根据flow name和实例版本号加载对应的流程实例，如果未找到对应的流程实例则抛出异常InvalidFlowException
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.FlowBaseControl.Config">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.FlowBaseControl.Mongo">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DB">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.NewUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.NewDBUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter，默认Dao为DB类型的DBAccess
+            </summary>
+            <typeparam name="DB"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.NewDBUnitParameter">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.SetUnitParameter(EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter,EFFC.Frame.Net.Data.Parameters.UnitParameter)">
+            <summary>
+            将Logic的数据写入到UnitParameter
+            </summary>
+            <param name="ld"></param>
+            <param name="up"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.Query``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            查询操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.NonQuery``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            非查询类的db操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.DBHelper.ExcuteSP``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            执行存储过程操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.SaveInstance(EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter,EFFC.Frame.Net.Data.FlowData.FlowData)">
+            <summary>
+            流程实例持久化
+            </summary>
+            <param name="p"></param>
+            <param name="d"></param>
+            <param name="flowinstance"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.LoadInstance(EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter,EFFC.Frame.Net.Data.FlowData.FlowData)">
+            <summary>
+            获取流程实例
+            每个instanceid的实例只有一个对应
+            </summary>
+            <param name="p"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.Init(EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter,EFFC.Frame.Net.Data.FlowData.FlowData)">
+            <summary>
+            初始化作业最优先执行
+            </summary>
+            <param name="p"></param>
+            <param name="d"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.GetLatestVersionBy(System.String)">
+            <summary>
+            通过流程名称获取已经注册的流程实例最新版本号
+            </summary>
+            <param name="flowname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.AfterProcess(EFFC.Frame.Net.Data.Parameters.Flow.FlowParameter,EFFC.Frame.Net.Data.FlowData.FlowData)">
+            <summary>
+            收尾处理，最后执行
+            </summary>
+            <param name="p"></param>
+            <param name="d"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.NewResourceEntity``1">
+            <summary>
+            創建一個普通的資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.NewTransResourceEntity``1">
+            <summary>
+            創建一個事務資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.BeginTrans">
+            <summary>
+            開啟事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.CommitTrans">
+            <summary>
+            提交事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseControl.RollBack">
+            <summary>
+            回滾事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseStep.BeginTrans">
+            <summary>
+            開啟事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseStep.CommitTrans">
+            <summary>
+            提交事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Core.FlowBaseStep.RollBack">
+            <summary>
+            回滾事務
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Flow.Interfaces.IFlowDefine`2">
+            <summary>
+            用于定义具体流程实体实行操作
+            </summary>
+            <typeparam name="P"></typeparam>
+            <typeparam name="D"></typeparam>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Interfaces.IFlowDefine`2.FlowName">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Flow.Interfaces.IFlowDefine`2.Version">
+            <summary>
+            流程版本号
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Flow.Interfaces.IFlowDefine`2.GetDriver(`0,`1)">
+            <summary>
+            获取定义的条件驱动器
+            </summary>
+            <param name="p"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Flow.Proxy.FlowBusinessProxy">
+            <summary>
+            多实例多线程业务模块请求代理
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Flow.Proxy.FlowBusinessSingletonProxy">
+            <summary>
+            单实例多线程业务模块请求代理
+            </summary>
+        </member>
+    </members>
+</doc>

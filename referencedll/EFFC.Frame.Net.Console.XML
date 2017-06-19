@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Console</name>
+    </assembly>
+    <members>
+        <member name="T:EFFC.Frame.Net.Console.Proxy.ConsoleBusinessProxy">
+            <summary>
+            多实例多线程业务模块请求代理
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Console.Proxy.ConsoleBusinessSingletonProxy">
+            <summary>
+            单实例多线程业务模块请求代理
+            </summary>
+        </member>
+    </members>
+</doc>

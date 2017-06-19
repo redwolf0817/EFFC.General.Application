@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Web</name>
+    </assembly>
+    <members>
+        <member name="P:EFFC.Frame.Net.Web.Core.PageBase.WebParameters">
+            <summary>
+            页面参数
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Web.Core.PageBase.WebData">
+            <summary>
+            页面进过处理后的数据
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Web.Core.PageBase.PageName">
+            <summary>
+            当前页面的名称
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.BeforeEventRaise(System.Web.UI.IPostBackEventHandler,System.String)">
+            <summary>
+            当页面事件发生时
+            </summary>
+            <param name="sourceControl"></param>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.AfterEventRaise(System.Web.UI.IPostBackEventHandler,System.String)">
+            <summary>
+            当页面事件发生之後
+            </summary>
+            <param name="sourceControl"></param>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.RegisterAutoProcess(System.Web.UI.Control)">
+            <summary>
+            注册自动执行控件
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.RegisterWebControlDataMap(System.Web.UI.Control)">
+            <summary>
+            提供给控件进行注册使用
+            </summary>
+            <typeparam name="T">Control,IWebControl</typeparam>
+            <param name="c"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.RegisterWebControlGlobalizationMap(System.Web.UI.Control)">
+            <summary>
+            提供给需要全球化控件进行注册使用
+            </summary>
+            <typeparam name="T">Control,IWebControl</typeparam>
+            <param name="c"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.RegisterSpecialControl(System.Web.UI.Control)">
+            <summary>
+            提供给特殊控件进行注册使用
+            </summary>
+            <typeparam name="T">Control,IWebControl</typeparam>
+            <param name="c"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.RegisterWebControlPermission(System.Web.UI.Control)">
+            <summary>
+            提供给控件进行注册使用
+            </summary>
+            <param name="c">Control,IActionPermission</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.FindControls(System.Web.UI.Control)">
+            <summary>
+            搜索頁面裏面的控件并添加到字典中
+            </summary>
+            <param name="contrainer"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.GetModule">
+            <summary>
+            获取本页面的数据Module，1.0.0.1版本中使用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.SetPageModelValue(EFFC.Frame.Net.Data.WebData.WebFormPageModel)">
+            <summary>
+            根据module的值往页面写数据
+            </summary>
+            <param name="module"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.SetPageModelValue">
+            <summary>
+            根据module的值往页面写数据
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.SetPageDataBind(EFFC.Frame.Net.Data.WebData.WebFormPageModel)">
+            <summary>
+            根据module的值进行数据绑定
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.SetPageDataBind">
+            <summary>
+            根据module的值进行数据绑定
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.PageBase.GetControlValue(System.Web.UI.Control)">
+            <summary>
+            获取控件的值
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Web.Core.WebBaseHandler`2.IsAjaxAsync">
+            <summary>
+            判断是否为ajax异步调用
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Web.Core.WebBaseHandler`2.IsWebSocket">
+            <summary>
+            是否为websocket请求
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Core.WebBaseHandler`2.ParseMultipartFormData(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            对multipart/form-data数据流进行解析
+            </summary>
+            <param name="stream"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Web.Core.WMcvBaseHandler`2">
+            <summary>
+            WITS.Frame2中的MVC框架处理器，用于处理后缀为view的请求。请求格式为Logic.action.view
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Web.Log.Log4Net.WriteLog(System.String)">
+            <summary>
+            ?庹
+            </summary>
+            <param name="msg"></param>
+        </member>
+    </members>
+</doc>

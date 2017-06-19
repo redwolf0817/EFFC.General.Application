@@ -1,0 +1,1468 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFFC.Frame.Net.Business</name>
+    </assembly>
+    <members>
+        <member name="T:EFFC.Frame.Net.Business.Engine.HostJsView">
+            <summary>
+            Host Js的View引擎
+            该引擎会将标签页面转化成hostjs文件，然后通过hostjs引擎进行输出view的html
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostJsView.CurrentContext">
+            <summary>
+            当前上下文
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.Compile(System.String,System.String,System.Boolean)">
+            <summary>
+            将源码编译成js代码
+            </summary>
+            <param name="filename">文件名称</param>
+            <param name="source">源码</param>
+            <param name="isCreateFile">是否产生编译后的文件,如果产生文件，则文件产生的目录为Host的根路径下的Compiled/View/</param>
+            <param name="outfilepath">产生编译后的js文件的存放路径，只有在isCreateFile=true的时候有效</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.DeleteAllCompiledFile">
+            <summary>
+            删除已经编译好的所有文件
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.DebugRun(System.String)">
+            <summary>
+            Debug模式运行，需要人工释放js引擎资源
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.DebugRun(System.String,EFFC.Frame.Net.Business.Engine.HostViewContext)">
+            <summary>
+            Debug模式运行，需要人工释放js引擎资源
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.DebugRun(System.String,EFFC.Frame.Net.Business.Engine.HostViewContext,System.String)">
+            <summary>
+             Debug方式运行js，该方式不会自动释放js引擎资源，需要手动执行，如果js引擎资源得不到良好释放会导致系统无法运行
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <param name="outobjname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.RenderDebug(System.String)">
+            <summary>
+            Debug方式进行页面渲染，该方式不会自动释放js引擎资源，需要手动执行，如果js引擎资源得不到良好释放会导致系统无法运行
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.RenderDebug(System.String,EFFC.Frame.Net.Business.Engine.HostViewContext)">
+            <summary>
+            Debug方式进行页面渲染，该方式不会自动释放js引擎资源，需要手动执行，如果js引擎资源得不到良好释放会导致系统无法运行
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.Render(System.String)">
+            <summary>
+            将js代码渲染成html
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.Render(System.String,EFFC.Frame.Net.Business.Engine.HostViewContext)">
+            <summary>
+            根据指定的上下文结构执行View渲染
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.GetConsoleMsg">
+            <summary>
+            获取控制台的信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostJsView.ReserveKeys">
+            <summary>
+            Logic Js的保留关键字
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostJsView.ServerReserverObjectKey">
+            <summary>
+            服务器保留对象
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostJsView.ReserverTags">
+            <summary>
+            服务器保留标签
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.Dispose">
+            <summary>
+            将整个资源都进行释放
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostJsView.Release">
+            <summary>
+            释放js引擎资源
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.RootPath">
+            <summary>
+            ~所表示的根路径的物理地址
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.CommonLibPath">
+            <summary>
+            公共库路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.RunTimeLibPath">
+            <summary>
+            运行时库路径
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.AddTag(EFFC.Frame.Net.Tag.Core.ITagParser)">
+            <summary>
+            添加一个tag
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.GetTag(System.String)">
+            <summary>
+            根据tag的名称获取一个tag
+            </summary>
+            <param name="tagname"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.AllTags">
+            <summary>
+            获取所有的Tag
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.AddHostJsObject(EFFC.Frame.Net.Base.ResouceManage.JsEngine.BaseHostJsObject)">
+            <summary>
+            添加一个hostjs对象
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.SetHostJsObject(EFFC.Frame.Net.Base.ResouceManage.JsEngine.BaseHostJsObject)">
+            <summary>
+            添加一个对象，有则更新，没有则新增
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.GetHostJsObject(System.String)">
+            <summary>
+            根据名称获取一个hostjs对象
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.AllHostJsObject">
+            <summary>
+            获取所有的hostjs对象
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostViewContext.SetDataModel(System.Object)">
+            <summary>
+            设置数据模型
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostViewContext.CurrentModel">
+            <summary>
+            获取当前的数据模型
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ViewDocument">
+            <summary>
+            View文档
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.HostViewTagModule">
+            <summary>
+            hostjs view的tag解析module
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.HjsTag">
+            <summary>
+            Hjs标签，不可内嵌，内容只能为js语句
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.OutTag">
+            <summary>
+            out标签,可以被很多标签内嵌，因此请在可以内嵌out标签解析器之前加载out标签，但out标签必须在hjs之前加载
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ForTag">
+            <summary>
+            for标签，加载时请在hjs标签之前加载
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.IfTag">
+            <summary>
+            if标签，可以被内嵌在for标签中，在加载的时候请在for标签之前加载
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ElseIfTag">
+            <summary>
+            elseif标签，可以被内嵌在for标签中，在加载的时候请在for标签之前加载
+            编写代码时，注意elseif标签紧跟在if标签之后，中间不要插入任何代码，本标签不会对if标签的位置进行任何检查
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ElseTag">
+            <summary>
+            else标签，可以被内嵌在for标签中，在加载的时候请在for标签之前加载
+            编写代码时，注意elseif标签紧跟在if标签之后，中间不要插入任何代码，本标签不会对if标签的位置进行任何检查
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.HostLogicEngine">
+            <summary>
+            HostLogic所需要的Js引擎
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.Compile(System.String,System.String,System.Boolean)">
+            <summary>
+            将源码编译成js代码
+            </summary>
+            <param name="source">源码</param>
+            <param name="filename">文件名称</param>
+            <param name="isCreateFile">是否产生编译后的js文件,如果产生文件，则文件产生的目录为运行时库所在的路径,默认为Host的根路径下的Compiled/Logic/</param>
+            <param name="outfilepath">产生编译后的js文件的存放路径，只有在isCreateFile=true的时候有效</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DeleteAllCompiledFile">
+            <summary>
+            删除已经编译好的所有文件
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.RunFormatJs(System.String)">
+            <summary>
+            运行格式化js，将js封装成function运行，可以使用return语句，用于HostLogic使用
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.RunFormatJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext)">
+            <summary>
+            运行格式化js，将js封装成function运行，可以使用return语句，用于HostLogic使用
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DebugRunFormatJs(System.String)">
+            <summary>
+            运行格式化js，将js封装成function运行，可以使用return语句，用于HostLogic使用
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DebugRunFormatJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext)">
+            <summary>
+            运行格式化js，将js封装成function运行，可以使用return语句，用于HostLogic使用
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.RunJs(System.String)">
+            <summary>
+            运行脚本，并获取计算结果
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DebugRunJs(System.String)">
+            <summary>
+            Debug方式运行js，该方式不会自动释放js引擎资源，需要手动执行，如果js引擎资源得不到良好释放会导致系统无法运行
+            </summary>
+            <param name="js"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.RunJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext)">
+            <summary>
+            运行js，默认返回参数名称为out
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DebugRunJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext)">
+            <summary>
+            debug方式运行js，默认返回参数名称为out
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.RunJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext,System.String)">
+            <summary>
+            根据指定的上下文执行hostjs
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <param name="outobjname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.DebugRunJs(System.String,EFFC.Frame.Net.Business.Engine.HostLogicContext,System.String)">
+            <summary>
+             Debug方式运行js，该方式不会自动释放js引擎资源，需要手动执行，如果js引擎资源得不到良好释放会导致系统无法运行
+            </summary>
+            <param name="js"></param>
+            <param name="context"></param>
+            <param name="outobjname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicEngine.GetConsoleMsg">
+            <summary>
+            获取控制台的信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicEngine.CurrentContext">
+            <summary>
+            当前上下文
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicEngine.ReserveKeys">
+            <summary>
+            Logic Js的保留关键字
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicEngine.ServerReserverObjectKey">
+            <summary>
+            服务器保留对象
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicEngine.ReserverTags">
+            <summary>
+            服务器保留标签
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.HostLogicContext">
+            <summary>
+            HostLogic的运行时的上下文
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.RootPath">
+            <summary>
+            ~所表示的根路径,Host Js的物理地址
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.CommonLibPath">
+            <summary>
+            $Common所表示的公共库路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.RunTimeLibPath">
+            <summary>
+            $RunTime所表示的运行时库路径
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicContext.AddTag(EFFC.Frame.Net.Tag.Core.ITagParser)">
+            <summary>
+            添加一个tag
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicContext.GetTag(System.String)">
+            <summary>
+            根据tag的名称获取一个tag
+            </summary>
+            <param name="tagname"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.AllTags">
+            <summary>
+            获取所有的Tag
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicContext.AddHostJsObject(EFFC.Frame.Net.Base.ResouceManage.JsEngine.BaseHostJsObject)">
+            <summary>
+            添加一个hostjs对象
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicContext.SetHostJsObject(EFFC.Frame.Net.Base.ResouceManage.JsEngine.BaseHostJsObject)">
+            <summary>
+            添加一个对象，有则更新，没有则新增
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.HostLogicContext.GetHostJsObject(System.String)">
+            <summary>
+            根据名称获取一个hostjs对象
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.AllHostJsObject">
+            <summary>
+            获取所有的hostjs对象
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.HostLogicContext.CurrentJsEngine">
+            <summary>
+            当前的hostjs引擎
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ServerObject">
+            <summary>
+            服务器端对象
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.ClientObject">
+            <summary>
+            服务器端对象
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.SessionObject.Abandon">
+            <summary>
+            清除当前session
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.LoginInfoObject">
+            <summary>
+            登录信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.LoginInfoObject.HasLoginInfo">
+            <summary>
+            是否有登录信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.LoginInfoObject.UserID">
+            <summary>
+            用户登录账号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Engine.LoginInfoObject.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.LoginInfoObject.GetValue(System.String)">
+            <summary>
+            获取其他登录信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Engine.CookieObject">
+            <summary>
+            Cookie对象
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.CookieObject.Remove(System.String)">
+            <summary>
+            删除一个cookie数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Engine.DBObject.Open(System.String,System.String)">
+            <summary>
+            开启一个DB连接
+            </summary>
+            <param name="dbtype"></param>
+            <param name="connstr"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DOD">
+            <summary>
+            dod操作相关
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DO">
+            <summary>
+            dod操作相关-动态调用方法
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DOHelper.DO``1(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            DOD调用，param的第一个默认为instanceid
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="propertyname"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.LogicCall">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.LogicCallHelper.SetShareValue(System.String,System.Object)">
+            <summary>
+            写入Logic间的共享数据
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.LogicCallHelper.GetShareValue(System.String,System.Object)">
+            <summary>
+            获取Logic间的共享数据
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.LogicCallHelper.CallLogic``1(System.String)">
+            <summary>
+            本地呼叫其他的logic
+            </summary>
+            <typeparam name="L"></typeparam>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.HostJsHelper.Call(System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            呼叫js脚本
+            </summary>
+            <param name="scriptpath">脚本路径，根路径用~表示</param>
+            <param name="includes">需要include进来的脚本，根路径用~表示</param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.HostJsHelper.Call(System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            呼叫js脚本
+            </summary>
+            <param name="scriptstr"></param>
+            <param name="input"></param>
+            <param name="outputkey"></param>
+            <param name="others"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.Configs">
+            <summary>
+            Config操作
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CallContext_Parameter">
+            <summary>
+            提供call context环境下的参数资源集访问
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CallContext_DataCollection">
+            <summary>
+            提供call context环境下的数据集访问
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CallContext_CurrentToken">
+            <summary>
+            提供call context环境下的当前事务token访问
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CallContext_ResourceManage">
+            <summary>
+            提供call context环境下的当前资源管理器访问
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.BeginTrans">
+            <summary>
+            開啟事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CommitTrans">
+            <summary>
+            提交事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.RollBack">
+            <summary>
+            回滾事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CreateResource``1">
+            <summary>
+            创建一个资源
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DB">
+            <summary>
+            db操作相关
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewResourceEntity``1">
+            <summary>
+            創建一個普通的資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewTransResourceEntity``1">
+            <summary>
+            創建一個事務資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewTransResourceEntity``1(EFFC.Frame.Net.Base.Token.TransactionToken)">
+            <summary>
+            創建一個事務資源對象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="token">指定的事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewDBUnitParameter``1">
+            <summary>
+            获得一个新的UnitParamter，默认Dao为DB类型的DBAccess
+            </summary>
+            <typeparam name="DB"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NewDBUnitParameter">
+            <summary>
+            获得一个新的UnitParamter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.SetUnitParameter(EFFC.Frame.Net.Data.LogicData.LogicData,EFFC.Frame.Net.Data.Parameters.UnitParameter)">
+            <summary>
+            将Logic的数据写入到UnitParameter
+            </summary>
+            <param name="ld"></param>
+            <param name="up"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.SetUnitParameter(EFFC.Frame.Net.Data.LogicData.LogicData,EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            将Logic的数据写入到UnitParameter
+            </summary>
+            <param name="ld"></param>
+            <param name="up"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.Excute(EFFC.Frame.Net.Data.Parameters.UnitParameter,EFFC.Frame.Net.Base.ResouceManage.DB.DBExpress)">
+            <summary>
+            标准化DB执行操作
+            </summary>
+            <param name="p"></param>
+            <param name="express"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.Excute(EFFC.Frame.Net.Data.Parameters.UnitParameter,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            通过json对象执行标准化DB操作
+            </summary>
+            <param name="p"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.Excute(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            通过json串执行标准化DB操作
+            </summary>
+            <param name="p"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.Query``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            查询操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.QueryByPage``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            翻页查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.NonQuery``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            非查询类的db操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.ExcuteSP``1(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String)">
+            <summary>
+            执行存储过程操作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="p"></param>
+            <param name="actionflag">动作区分标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.UpdateOracle(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            根据obj的定义更新单表，obj定义格式如下
+            {
+            col1:value,
+            coln:value,
+            where:{
+            c1:{$op:value}
+            cn:{$op:value}
+            }
+            }
+            </summary>
+            <param name="p"></param>
+            <param name="table"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.UpdateSQLServer(EFFC.Frame.Net.Data.Parameters.UnitParameter,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            根据obj的定义更新单表，obj定义格式如下
+            {
+            col1:value,
+            coln:value,
+            where:{
+            c1:{$op:value}
+            cn:{$op:value}
+            }
+            }
+            </summary>
+            <param name="p"></param>
+            <param name="table"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DBHelper.ParseWhereExpress(EFFC.Frame.Net.Business.Logic.BaseLogic{`0,`1}.DBHelper.DBType,System.Object,EFFC.Frame.Net.Base.ResouceManage.DB.DBOParameterCollection@)">
+            <summary>
+            根据json的条件定义构成where语句
+            </summary>
+            <param name="dbtype"></param>
+            <param name="where"></param>
+            <param name="dbc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DataConvertor.ConvertTo``2(System.Object)">
+            <summary>
+            数据类型转化，将obj转化成T类型数据
+            </summary>
+            <typeparam name="Convert">转换器</typeparam>
+            <typeparam name="T">目标数据类型</typeparam>
+            <param name="obj">待转换数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.DataConvertor.ConvertTo``3(``1)">
+            <summary>
+            数据类型转化，将From转化成To类型数据
+            </summary>
+            <typeparam name="Convert">转换器</typeparam>
+            <typeparam name="From">来源类型</typeparam>
+            <typeparam name="To">目标类型</typeparam>
+            <param name="obj">待转换数据</param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.BaseLogic`2.CacheHelper">
+            <summary>
+            cache操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.SetCache(System.String,System.Object)">
+            <summary>
+            写入缓存,默认30分钟后超时
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.SetCache(System.String,System.Object,System.Int32)">
+            <summary>
+            写入缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="expirationMinites"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.SetCache(System.String,System.Object,System.DateTime)">
+            <summary>
+            写入缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="expirationtime"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.SetCache(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            写入缓存（超过指定时间没用则过期）
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="slide"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.GetCache(System.String)">
+            <summary>
+            从缓存中获取数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.BaseLogic`2.FrameCache.RemoveCache(System.String)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.HostJsLogic.GetLogicRootPath">
+            <summary>
+            获取logic js文件的根路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Logic.ServerObject">
+            <summary>
+            服务器端对象
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Logic.ClientObject">
+            <summary>
+            服务器端对象
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.SessionObject.Abandon">
+            <summary>
+            清除当前session
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Logic.LoginInfoObject">
+            <summary>
+            登录信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.LoginInfoObject.HasLoginInfo">
+            <summary>
+            是否有登录信息
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.LoginInfoObject.UserID">
+            <summary>
+            用户登录账号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.LoginInfoObject.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.LoginInfoObject.GetValue(System.String)">
+            <summary>
+            获取其他登录信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Logic.CookieObject">
+            <summary>
+            Cookie对象
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.CookieObject.Remove(System.String)">
+            <summary>
+            删除一个cookie数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.DBObject.Open(System.String,System.String)">
+            <summary>
+            开启一个DB连接
+            </summary>
+            <param name="dbtype"></param>
+            <param name="connstr"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.Validation">
+            <summary>
+            cache操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ValidationHelper.RequireValidation(EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            进行必输验证
+            </summary>
+            <param name="rule">json结构，key为传入参数名称，value为提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ValidationHelper.RequireValidation(System.String)">
+            <summary>
+            进行必输验证
+            </summary>
+            <param name="json">key为传入参数名称，value为提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ValidationHelper.DateTimeValidation(EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            判定是否为日期类型
+            </summary>
+            <param name="rule">json结构，key为传入参数名称，value为提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ValidationHelper.DateTimeValidation(System.String)">
+            <summary>
+            判定是否为日期类型
+            </summary>
+            <param name="json">key为传入参数名称，value为提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ValidationHelper.NumberValidation(EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            判定是否为数字类型
+            </summary>
+            <param name="rule">key为传入参数名称，value为提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.Application">
+            <summary>
+            Application存储器操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ApplicationHelper.AddApplicationValue(System.String,System.Object)">
+            <summary>
+            新增session数据
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ApplicationHelper.GetApplicationValue(System.String)">
+            <summary>
+            获取session数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ApplicationHelper.RemoveApplicationValue(System.String)">
+            <summary>
+            移除session数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.Cookie">
+            <summary>
+            cache操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CookieHelper.SetCookie(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            新增一个cookie
+            </summary>
+            <param name="name">名称</param>
+            <param name="value">值</param>
+            <param name="domain">cookie对应的域，如果不需要则填写null</param>
+            <param name="expiretime">过期时间</param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CookieHelper.SetCookie(System.String,System.String)">
+            <summary>
+            新增一个cookie，采用默认的域和时间
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CookieHelper.GetCookie(System.String)">
+            <summary>
+            获取cookie的值，如果没有值则返回空串
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CookieHelper.RemoveCookie(System.String)">
+            <summary>
+            删除一个cookie
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WS">
+            <summary>
+            websocket操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WebSocketHelper.Send(System.Object)">
+            <summary>
+            即时回传信息
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WebSocketHelper.Recieve">
+            <summary>
+            接收websockect发来的消息，该方法会阻断当前线程，直到消息发来或因超时导致框架自动关闭连接
+            若因超时连接自动关闭则后续程序将无法处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WebSocketHelper.RecieveAsync(System.Action{System.Object},System.Action)">
+            <summary>
+            异步接收信息或因超时导致框架自动关闭连接
+            </summary>
+            <param name="func"></param>
+            <param name="whenerror"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WebSocketHelper.CloseConnection(System.String)">
+            <summary>
+            即时关闭websocket连接
+            </summary>
+            <param name="closedesc"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.WebSocketHelper.IsClose">
+            <summary>
+            判断是否已经关闭
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.Sessions">
+            <summary>
+            cache操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SessionHelper.AddSessionValue(System.String,System.Object)">
+            <summary>
+            新增session数据
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SessionHelper.GetSessionValue(System.String)">
+            <summary>
+            获取session数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SessionHelper.RemoveSessionValue(System.String)">
+            <summary>
+            移除session数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SessionHelper.SessionAbandon">
+            <summary>
+            取消Session
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SessionHelper.SessionID">
+            <summary>
+            获取本次Session的ID
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ClientInfo">
+            <summary>
+            客户端信息集
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfo">
+            <summary>
+            服务器端信息集
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.ServerName">
+            <summary>
+            server的机器名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.ServerRootPath">
+            <summary>
+            Web服务器的物理路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.ServerRootPath_URL">
+            <summary>
+            Web服务器的站点路径
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.SiteHostUrl">
+            <summary>
+            站点Host的url
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ServerInfoProperty.Domain">
+            <summary>
+            获取站点的域名
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ClientInfoProperty.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ClientInfoProperty.UserHostName">
+            <summary>
+            Client端机器名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ClientInfoProperty.BrowserVersion">
+            <summary>
+            Client端浏览器版本号
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.ClientInfoProperty.Platform">
+            <summary>
+            Client端操作平台名称
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.GetModel``1">
+            <summary>
+            从Querystring和postdata中获取数据，并生成对应的Model，效能较低，谨慎使用
+            </summary>
+            <typeparam name="M"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.BeginTrans">
+            <summary>
+            開啟事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CommitTrans">
+            <summary>
+            提交事務
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.RollBack">
+            <summary>
+            回滾事務
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.LoginInfo">
+            <summary>
+            登陆者的信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.UpdateLoginInfo(EFFC.Frame.Net.Data.LoginUserData)">
+            <summary>
+            更新LoginInfo
+            </summary>
+            <param name="logininfo"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.IsAjaxAsync">
+            <summary>
+            判断本次请求是否为ajax异步调用
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.IsWebSocket">
+            <summary>
+            判断本次请求是否为websocket方式
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.SetHostViewPath(System.String)">
+            <summary>
+            手工设定host view文件路径
+            格式：~/xxx.js
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.CurrentHostViewEngine">
+            <summary>
+            当前系统使用的HostView的渲染引擎
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.Globaliztion">
+            <summary>
+            全球化
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.GlobalizationHelper.Message(System.String,System.String)">
+            <summary>
+            提示信息全球化，如果没有找到对应资源则key作为返回值
+            </summary>
+            <param name="targetSpace">目标空间</param>
+            <param name="key">对应资源key，如果没有找到对应资源则key作为返回值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.GlobalizationHelper.Message(System.String)">
+            <summary>
+            提示信息全球化，目标空间为本logic的name，如果没有找到对应资源则key作为返回值
+            </summary>
+            <param name="key">对应资源key，如果没有找到对应资源则key作为返回值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Logic.WebBaseLogic`2.GlobalizationHelper.GlobalMessage(System.String)">
+            <summary>
+            提供Global目标空间中的提示信息
+            </summary>
+            <param name="key">对应资源key，如果没有找到对应资源则key作为返回值</param>
+            <returns></returns>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Logic.WebForm.WebFormLogic">
+            <summary>
+            提供给Webform business进行类型区分使用
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Module.AssemblyLoadBusinessSingletonModule`3">
+            <summary>
+            通过Assembly反射方式加载单实例Logic并运行
+            默认过期时间为12小时
+            </summary>
+            <typeparam name="P"></typeparam>
+            <typeparam name="D"></typeparam>
+            <typeparam name="L"></typeparam>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Module.AssemblyLoadBusinessSingletonModule`3.TimeExpiration">
+            <summary>
+            设置固定的过期时间,默认12小时
+            两种过期时间设了其中一种，另一种要设为0,用NoAbsolute(Sliding)Expiration枚举
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Module.AssemblyLoadBusinessSingletonModule`3.SlidingExpiration">
+            <summary>
+            设置最后一次访问后多长时间过期,默认不过期
+            两种过期时间设了其中一种，另一种要设为0,用NoAbsolute(Sliding)Expiration枚举
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Module.AssemblyLoadBusinessModule`3">
+            <summary>
+            通过Assembly反射方式加载Logic并运行
+            </summary>
+            <typeparam name="P"></typeparam>
+            <typeparam name="D"></typeparam>
+            <typeparam name="L"></typeparam>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit">
+            <summary>
+            DOD作业主要针对各种查询操作，因此在开发时注意使用with(nolock)模式以解决事务锁的问题
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.Query``1(System.String,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            DB资料查询
+            自动识别sql中的参数，并从传入的参数集中找对应的参数，如果没有，则需补充自定义的参数定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connstr"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.Query``1(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            DB资料查询，连接串使用默认框架默认连接
+            自动识别sql中的参数，并从传入的参数集中找对应的参数，如果没有，则需补充自定义的参数定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.NonQuery``1(System.String,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            DB资料非查询
+            自动识别sql中的参数，并从传入的参数集中找对应的参数，如果没有，则需补充自定义的参数定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connstr"></param>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.NonQuery``1(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+             DB资料非查询，连接串使用默认框架默认连接
+            自动识别sql中的参数，并从传入的参数集中找对应的参数，如果没有，则需补充自定义的参数定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="param"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.ExcuteSP``1(System.String,System.String,System.Boolean,EFFC.Frame.Net.Base.ResouceManage.DB.DBOParameterCollection)">
+            <summary>
+            执行sp
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connstr"></param>
+            <param name="spname"></param>
+            <param name="isreturnds"></param>
+            <param name="dbp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.ExcuteSP``1(System.String,System.Boolean,EFFC.Frame.Net.Base.ResouceManage.DB.DBOParameterCollection)">
+            <summary>
+            执行SP，连接串使用默认框架默认连接
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="spname"></param>
+            <param name="isreturnds"></param>
+            <param name="dbp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.QueryNOSQL(System.String,System.String,System.String,System.String)">
+            <summary>
+            nosql型db查询
+            </summary>
+            <param name="connstr"></param>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.QueryNOSQL(System.String,System.String,System.String)">
+            <summary>
+            nosql型db查询，连接串使用默认框架默认连接
+            </summary>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.UpdateNOSQL(System.String,System.String,System.String,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            nosql型db修改
+            </summary>
+            <param name="connstr"></param>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <param name="updateobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.UpdateNOSQL(System.String,System.String,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            nosql型db修改，连接串使用默认框架默认连接
+            </summary>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <param name="updateobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.InsertNOSQL(System.String,System.String,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            nosql型db新增
+            </summary>
+            <param name="connstr"></param>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <param name="updateobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.InsertNOSQL(System.String,System.String,EFFC.Frame.Net.Base.Data.Base.FrameDLRObject)">
+            <summary>
+            nosql型db新增，连接串使用默认框架默认连接
+            </summary>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.DeleteNOSQL(System.String,System.String,System.String,System.String)">
+            <summary>
+            nosql型db删除
+            </summary>
+            <param name="connstr"></param>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.DeleteNOSQL(System.String,System.String,System.String)">
+            <summary>
+            nosql型db删除，连接串使用默认框架默认连接
+            </summary>
+            <param name="dbname"></param>
+            <param name="collectionname"></param>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.InputP">
+            <summary>
+            传入参数操作
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.InputPHelper.CurrentPropertyName">
+            <summary>
+            当前需要的属性名称
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.Configs">
+            <summary>
+            Config操作
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.Init(EFFC.Frame.Net.Data.Parameters.DODParameter)">
+            <summary>
+            初始化
+            当属性值从cache中获取时则不会调用
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.UUID">
+            <summary>
+            唯一ID标识
+            </summary>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.GetSourceDefinition(System.String)">
+            <summary>
+            获取属性来源定义
+            </summary>
+            <param name="propertyname"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.InstanceID">
+            <summary>
+            获取实例编号
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.After(EFFC.Frame.Net.Data.Parameters.DODParameter)">
+            <summary>
+            结尾处理
+            当属性值从cache中获取时则不会调用
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.SetCache(System.String,EFFC.Frame.Net.Data.UnitData.DOCollection,System.DateTime,System.TimeSpan)">
+            <summary>
+            写入缓存
+            </summary>
+            <param name="propertyname"></param>
+            <param name="value"></param>
+            <param name="expiration"></param>
+            <param name="sliding_expiration"></param>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.GetCache(System.String)">
+            <summary>
+            获取缓存的属性数据
+            </summary>
+            <param name="propertyname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.RemoveCache(System.String)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="propert"></param>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.CacheSetting.IsCache">
+            <summary>
+            是否缓存，默认为是
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.CacheSetting.CacheExpiration">
+            <summary>
+            在指定的时间过期，默认为永不过期
+            </summary>
+        </member>
+        <member name="P:EFFC.Frame.Net.Business.Unit.DOD.DODBaseUnit.CacheSetting.CacheSlidingExpiration">
+            <summary>
+            多长时间不用就会过期，默认为30分钟
+            </summary>
+        </member>
+        <member name="T:EFFC.Frame.Net.Business.Unit.DOD.DODUnitProxy">
+            <summary>
+            DODUnit呼叫Proxy
+            </summary>
+        </member>
+    </members>
+</doc>

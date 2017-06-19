@@ -1,0 +1,138 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="/css/jquery-ui-1.11.2.min.css" rel="stylesheet" />
+    <script src="/js/jquery-1.8.2.min.js"></script>
+    <script src="/js/jquery-ui-1.11.2.min.js"></script>
+    <script src="/js/FrameJs/global.js"></script>
+    <script type="text/javascript">
+        $(function (e) {
+            var ws;
+            var syntaxs;
+            var wait;
+            $("#start").enable(true);
+            $("#stop").enable(true);
+            $("#setfreq").enable(true);
+            $(function () {
+                $("#start").click(function () {
+                    //if (!ws || ws.readyState == WebSocket.CLOSED) {
+                    //    ws = new WebSocket('ws://' + window.location.hostname + (window.location.port == "" ? "" : ':' + window.location.port) + '/weixinmonitor.hgo');
+                    //    ws.onopen = function () {
+                    //        $('#tips').text('已经连接');
+                    //        ws.send("");
+                    //        $("#start").enable(false);
+                    //        $("#stop").enable(true);
+                    //        $("#setfreq").enable(true);
+                    //    }
+                    //    ws.onmessage = function (evt) {
+                    //        eval("var jobj=" + evt.data);
+                    //        if (jobj) {
+                    //            if (jobj.ErrorCode == "") {
+                    //                var re = jobj.Content.result;
+                    //                $("#result").val($('#result').val() + "\n" + JSON.stringify(jobj.Content));
+                    //            } else {
+                    //                $('#result').val($('#result').val() + "\n" + jobj.ErrorMessage);
+                    //            }
+                    //        } else {
+                    //            $('#result').val($('#result').val() + "\n" + evt.data);
+                    //        }
+                    //    }
+                    //    ws.onerror = function (evt) {
+                    //        $('#tips').text(JSON.stringify(evt));
+                    //    }
+                    //    ws.onclose = function () {
+                    //        $('#tips').text('已经关闭');
+                    //        $("#start").enable(true);
+                    //        $("#stop").enable(false);
+                    //        $("#setfreq").enable(false);
+                    //    }
+                    //}
+                    wait = setInterval(SeqenceLoad, parseInt($("#frequence").val()) * 1000);
+                })
+
+                function SeqenceLoad() {
+                    $.Frame.Ajax.Ajax({
+                        url: "weixinmonitor.load.hgo",
+                        postdata: "",
+                        before: function (e) {
+
+                        },
+                        success: function (rtn) {
+                            if (rtn.issuccess) {
+                                for (var k in rtn.contents) {
+                                    $("#result").val($('#result').val() + "\n" + rtn.contents[k].Key + ":" + JSON.stringify(rtn.contents[k].Content));
+                                }
+                            } else {
+                                $("#result").val($('#result').val() + "\n" + rtn.msg);
+                            }
+                        },
+                        complete: function (XMLHttpRequest, textStatus) {
+
+                        },
+                        fail: function (errorcode, errormsg) {
+
+                        }
+                    });
+                }
+               
+                $("#clear").click(function () {
+                    $.Frame.Ajax.Ajax({
+                        url: "weixinmonitor.clear.hgo",
+                        postdata: "",
+                        before: function (e) {
+
+                        },
+                        success: function (rtn) {
+                            $("#result").val("");
+                            $.Frame.Message.ShowMsg("成功");
+                        },
+                        complete: function (XMLHttpRequest, textStatus) {
+
+                        },
+                        fail: function (errorcode, errormsg) {
+
+                        }
+                    });
+                })
+                
+
+                $('#stop').click(function () {
+                    //if (ws) {
+                    //    ws.send("close")
+                    //}
+                    clearInterval(wait);
+                });
+                $('#setfreq').click(function () {
+                    if (!isNaN($("#frequence"))) {
+                        $.Frame.Message.ShowMsg("刷新频率请输入整数！");
+                    }
+                    //if (ws) {
+                    //    ws.send(JSON.stringify({
+                    //        flag: "freq",
+                    //        freq: parseInt($("#frequence").val())
+                    //    }))
+                    //}
+                    clearInterval(wait);
+                    wait = setInterval(SeqenceLoad, parseInt($("#frequence").val())*1000);
+                });
+            });
+
+           
+
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="start" value="开始监控" />
+    <input type="button" id="stop" value="停止监控" /><br />
+    <input type="text" id="frequence" value="10"/><input type="button" id="setfreq" value="设定刷新频率" /><br />
+    <input type="button" id="clear" value="清除记录" /><br />
+    <textarea id="result" readonly="readonly" style="width:800px;height:400px">
+
+    </textarea><br />
+    <label id="tips"></label>
+</body>
+</html>
