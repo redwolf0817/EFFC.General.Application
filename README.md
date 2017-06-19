@@ -28,6 +28,7 @@ EFFC框架下的访问都是rest的访问方式，不同的是采用L.A请求（
 # 框架的运行流程和生命周期
 一个基本的go请求层次如下：
 * http请求->FrameHandlerFactory->GoHandler->GoLogic->Unit
+
 如果想要对请求方式进行路由扩展，可以在FrameHandlerFactory进行修改处理，L.A的请求基本是分辨出请求中的Logic和action，跟采用何种路由或编写方式都不做约定，可以自行修改
 
 GoHandler定义了go请求的处理流程和生命周期以及错误处理，如果想进行生命周期的修改和调整可以在此处进行
