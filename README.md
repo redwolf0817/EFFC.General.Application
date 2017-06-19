@@ -37,4 +37,6 @@ GoLogic是进行业务逻辑处理的地方，如果需要在业务逻辑处理�
 
 Unit是数据访问的定义，如果想对访问方式和sql进行一些预处理则在BaseDBUnit中调整
 
+在Web.config/handlers中定义了不同请求对应的Handler，都可以自行修改
+
 
